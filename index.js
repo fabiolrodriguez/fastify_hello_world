@@ -5,7 +5,7 @@ const fastify = require('fastify')({
 })
 
 const client = new Client('https://nodejs.org')
-const port = '3000'
+const port = process.env.PORT || 1337;
 
 fastify.get('/', function (request, reply) {
   client.request({
@@ -44,7 +44,7 @@ fastify.get('/', function (request, reply) {
   })
 })
 
-fastify.listen(3000, '0.0.0.0', async function (error, address) {
+fastify.listen(port, '0.0.0.0', async function (error, address) {
   if (error) {
     fastify.log.error(error)
     process.exit(1)
