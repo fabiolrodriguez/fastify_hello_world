@@ -11,8 +11,8 @@
     "author": "Tierney Cyren <hello@bnb.im>",
     "license": "MIT",
     "dependencies": {
-      "fastify": "^3.8.0",
-      "semver": "^7.3.4",
-      "undici": "^2.2.0"
+      "fastify": "^3.27.4",
+      "semver": "^7.3.5",
+      "undici": "^4.15.1"
     }
 }
