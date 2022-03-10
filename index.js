@@ -5,7 +5,7 @@ const fastify = require('fastify')({
 })
 
 const client = new Client('https://nodejs.org')
-// const port = process.env.PORT || 1337;
+const port = process.env.PORT || 1337;
 
 fastify.get('/', function (request, reply) {
   client.request({
@@ -44,22 +44,10 @@ fastify.get('/', function (request, reply) {
   })
 })
 
-// fastify.listen(port, '0.0.0.0', async function (error, address) {
-//   if (error) {
-//     fastify.log.error(error)
-//     process.exit(1)
-//   }
-//   fastify.log.info(`server listening on ${address}`)
-// })
-
-const start = async () => {
-    try {
-        const PORT = process.env.port || 1337;
-        await fastify.listen(PORT,'0.0.0.0', () => console.log('SERVER LISTENING AT PORT : '+ PORT))
-    } catch (err) {
-        fastify.log.error(err)
-        process.exit(1)
+fastify.listen(port, '0.0.0.0', async function (error, address) {
+    if (error) {
+      fastify.log.error(error)
+      process.exit(1)
     }
-}
-   
-start()
+    fastify.log.info(`server listening on ${address}`)
+  })
