@@ -5,7 +5,7 @@ const fastify = require('fastify')({
 })
 
 const client = new Client('https://nodejs.org')
-const port = process.env.PORT || 1337;
+const port = process.env.PORT
 
 fastify.get('/', function (request, reply) {
   client.request({
