@@ -1,0 +1,14 @@
+{
+    "name": "fastify-hello-world",
+    "description": "Simple Hello World Fastify sample for Azure App Service",
+    "version": "0.0.1",
+    "private": true,
+    "license": "MIT",
+    "author": "Fabio de Lima Rodriguez",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {
+        "fastify": "^3.0.0"
+    }
+}
