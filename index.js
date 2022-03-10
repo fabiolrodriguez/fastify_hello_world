@@ -44,7 +44,7 @@ fastify.get('/', function (request, reply) {
   })
 })
 
-fastify.listen(port, '0.0.0.0', async function (error, address) {
+fastify.listen(3000, '0.0.0.0', async function (error, address) {
   if (error) {
     fastify.log.error(error)
     process.exit(1)
